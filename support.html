@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="multi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU After-sales Support Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            background-color: #f5f7fa;
+        }
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #00000015;
+        }
+        h2 {
+            text-align: center;
+            color: #222;
+            margin-top: 0;
+        }
+        .lang-block {
+            border: 1px solid #dde0e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin: 12px 0 6px;
+        }
+        textarea {
+            width: 100%;
+            min-height: 90px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        input[type="file"] {
+            padding: 6px;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top:15px;
+        }
+        button:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>EU Product After-sales Form</h2>
+    <form id="afterSaleForm">
+        <!-- English -->
+        <div class="lang-block">
+            <strong>English</strong>
+            <label>Hello Seller, I have an after-sales issue with this product.<br>Product photos:</label>
+            <input type="file" multiple class="en-photo">
+            <label>Problem description:</label>
+            <textarea class="en-desc" placeholder="Enter description..."></textarea>
+        </div>
+
+        <!-- Deutsch -->
+        <div class="lang-block">
+            <strong>Deutsch</strong>
+            <label>Hallo Verkäufer, ich habe ein Kundenservice-Problem mit diesem Produkt.<br>Produktbilder:</label>
+            <input type="file" multiple class="de-photo">
+            <label>Problembeschreibung:</label>
+            <textarea class="de-desc" placeholder="Beschreibung eingeben..."></textarea>
+        </div>
+
+        <!-- Italiano -->
+        <div class="lang-block">
+            <strong>Italiano</strong>
+            <label>Salve Venditore, ho un problema di assistenza post-vendita con questo prodotto.<br>Foto del prodotto:</label>
+            <input type="file" multiple class="it-photo">
+            <label>Descrizione del problema:</label>
+            <textarea class="it-desc" placeholder="Inserisci descrizione..."></textarea>
+        </div>
+
+        <!-- Español -->
+        <div class="lang-block">
+            <strong>Español</strong>
+            <label>Hola Vendedor, tengo un problema de asistencia posventa con este producto.<br>Fotos del producto:</label>
+            <input type="file" multiple class="es-photo">
+            <label>Descripción del problema:</label>
+            <textarea class="es-desc" placeholder="Escribe la descripción..."></textarea>
+        </div>
+
+        <!-- Français -->
+        <div class="lang-block">
+            <strong>Français</strong>
+            <label>Bonjour Vendeur, j’ai un problème de service après-vente concernant ce produit.<br>Photos du produit:</label>
+            <input type="file" multiple class="fr-photo">
+            <label>Description du problème:</label>
+            <textarea class="fr-desc" placeholder="Saisissez la description..."></textarea>
+        </div>
+
+        <button type="submit">Submit & Send Email to support-eu@shanna.cc</button>
+    </form>
+</div>
+
+<script>
+const form = document.getElementById('afterSaleForm');
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    // 获取所有文本内容
+    const enText = `Hello Seller, I have an after-sales issue with this product.
+Product photos:
+Problem description:
+${document.querySelector('.en-desc').value}
+
+`;
+
+    const deText = `Hallo Verkäufer, ich habe ein Kundenservice-Problem mit diesem Produkt.
+Produktbilder:
+Problembeschreibung:
+${document.querySelector('.de-desc').value}
+
+`;
+
+    const itText = `Salve Venditore, ho un problema di assistenza post-vendita con questo prodotto.
+Foto del prodotto:
+Descrizione del problema:
+${document.querySelector('.it-desc').value}
+
+`;
+
+    const esText = `Hola Vendedor, tengo un problema de asistencia posventa con este producto.
+Fotos del producto:
+Descripción del problema:
+${document.querySelector('.es-desc').value}
+
+`;
+
+    const frText = `Bonjour Vendeur, j’ai un problème de service après-vente concernant ce produit.
+Photos du produit:
+Description du problème:
+${document.querySelector('.fr-desc').value}
+`;
+
+    const fullBody = enText + deText + itText + esText + frText;
+    const mailTo = "support-eu@shanna.cc";
+    const subject = "EU After-sales Customer Feedback";
+
+    // 构造mailto链接
+    const mailLink = `mailto:${mailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullBody)}`;
+    window.open(mailLink);
+});
+</script>
+</body>
+</html>
