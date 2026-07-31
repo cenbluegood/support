@@ -71,45 +71,40 @@
         <!-- English -->
         <div class="lang-block">
             <strong>English</strong>
-            <label>Hello Seller, I have an after-sales issue with this product.<br>Product photos:</label>
-            <input type="file" multiple class="en-photo">
-            <label>Problem description:</label>
+            <label>Hello Seller, I have an after-sales issue with this product.<br>Important: Please attach photos showing the product appearance and send them to the seller!</label>
+            <label>Product issue description:</label>
             <textarea class="en-desc" placeholder="Enter description..."></textarea>
         </div>
 
         <!-- Deutsch -->
         <div class="lang-block">
             <strong>Deutsch</strong>
-            <label>Hallo Verkäufer, ich habe ein Kundenservice-Problem mit diesem Produkt.<br>Produktbilder:</label>
-            <input type="file" multiple class="de-photo">
-            <label>Problembeschreibung:</label>
+            <label>Hallo Verkäufer, ich habe ein Kundenservice-Problem mit diesem Produkt.<br>Wichtig: Bitte fügen Sie Fotos des Produkts als Anhang hinzu und senden Sie diese an den Verkäufer!</label>
+            <label>Beschreibung des Produktproblems:</label>
             <textarea class="de-desc" placeholder="Beschreibung eingeben..."></textarea>
         </div>
 
         <!-- Italiano -->
         <div class="lang-block">
             <strong>Italiano</strong>
-            <label>Salve Venditore, ho un problema di assistenza post-vendita con questo prodotto.<br>Foto del prodotto:</label>
-            <input type="file" multiple class="it-photo">
-            <label>Descrizione del problema:</label>
+            <label>Salve Venditore, ho un problema di assistenza post-vendita con questo prodotto.<br>Importante: Allegare le foto dell'aspetto del prodotto e inviarle al venditore!</label>
+            <label>Descrizione del problema del prodotto:</label>
             <textarea class="it-desc" placeholder="Inserisci descrizione..."></textarea>
         </div>
 
         <!-- Español -->
         <div class="lang-block">
             <strong>Español</strong>
-            <label>Hola Vendedor, tengo un problema de asistencia posventa con este producto.<br>Fotos del producto:</label>
-            <input type="file" multiple class="es-photo">
-            <label>Descripción del problema:</label>
+            <label>Hola Vendedor, tengo un problema de asistencia posventa con este producto.<br>Importante: Adjunte fotos del aspecto del producto y envíelas al vendedor!</label>
+            <label>Descripción del problema del producto:</label>
             <textarea class="es-desc" placeholder="Escribe la descripción..."></textarea>
         </div>
 
         <!-- Français -->
         <div class="lang-block">
             <strong>Français</strong>
-            <label>Bonjour Vendeur, j’ai un problème de service après-vente concernant ce produit.<br>Photos du produit:</label>
-            <input type="file" multiple class="fr-photo">
-            <label>Description du problème:</label>
+            <label>Bonjour Vendeur, j’ai un problème de service après-vente concernant ce produit.<br>Important: Veuillez joindre les photos de l'apparence du produit et les envoyer au vendeur !</label>
+            <label>Description du problème du produit:</label>
             <textarea class="fr-desc" placeholder="Saisissez la description..."></textarea>
         </div>
 
@@ -159,7 +154,7 @@ ${document.querySelector('.fr-desc').value}
 
     const fullBody = enText + deText + itText + esText + frText;
     const mailTo = "support-eu@shanna.cc";
-    const subject = "EU After-sales Customer Feedback";
+    const subject = "Seeking assistance for product after-sales issues";
 
     // 构造mailto链接
     const mailLink = `mailto:${mailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullBody)}`;
