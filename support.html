@@ -71,7 +71,7 @@
         <!-- English -->
         <div class="lang-block">
             <strong>English</strong>
-            <label>Hello Seller, I have an after-sales issue with this product.<br>Important: Please attach photos showing the product appearance and send them to the seller!</label>
+            <label>Hello Seller, I have an after-sales issue with this product.<br>Important: Please send the screenshot of the Amazon order number to the seller!</label>
             <label>Product issue description:</label>
             <textarea class="en-desc" placeholder="Enter description..."></textarea>
         </div>
@@ -79,7 +79,7 @@
         <!-- Deutsch -->
         <div class="lang-block">
             <strong>Deutsch</strong>
-            <label>Hallo Verkäufer, ich habe ein Kundenservice-Problem mit diesem Produkt.<br>Wichtig: Bitte fügen Sie Fotos des Produkts als Anhang hinzu und senden Sie diese an den Verkäufer!</label>
+            <label>Hallo Verkäufer, ich habe ein Kundenservice-Problem mit diesem Produkt.<br>Wichtig: Bitte senden Sie dem Verkäufer den Screenshot der Amazon‑Bestellnummer!</label>
             <label>Beschreibung des Produktproblems:</label>
             <textarea class="de-desc" placeholder="Beschreibung eingeben..."></textarea>
         </div>
@@ -87,7 +87,7 @@
         <!-- Italiano -->
         <div class="lang-block">
             <strong>Italiano</strong>
-            <label>Salve Venditore, ho un problema di assistenza post-vendita con questo prodotto.<br>Importante: Allegare le foto dell'aspetto del prodotto e inviarle al venditore!</label>
+            <label>Salve Venditore, ho un problema di assistenza post-vendita con questo prodotto.<br>Importante: Si prega di inviare lo screenshot del numero d'ordine Amazon al venditore!</label>
             <label>Descrizione del problema del prodotto:</label>
             <textarea class="it-desc" placeholder="Inserisci descrizione..."></textarea>
         </div>
@@ -95,7 +95,7 @@
         <!-- Español -->
         <div class="lang-block">
             <strong>Español</strong>
-            <label>Hola Vendedor, tengo un problema de asistencia posventa con este producto.<br>Importante: Adjunte fotos del aspecto del producto y envíelas al vendedor!</label>
+            <label>Hola Vendedor, tengo un problema de asistencia posventa con este producto.<br>Importante: Por favor, envíe la captura de pantalla del número de pedido de Amazon al vendedor!</label>
             <label>Descripción del problema del producto:</label>
             <textarea class="es-desc" placeholder="Escribe la descripción..."></textarea>
         </div>
@@ -103,7 +103,7 @@
         <!-- Français -->
         <div class="lang-block">
             <strong>Français</strong>
-            <label>Bonjour Vendeur, j’ai un problème de service après-vente concernant ce produit.<br>Important: Veuillez joindre les photos de l'apparence du produit et les envoyer au vendeur !</label>
+            <label>Bonjour Vendeur, j’ai un problème de service après-vente concernant ce produit.<br>Important: Veuillez envoyer la capture d'écran du numéro de commande Amazon au vendeur !</label>
             <label>Description du problème du produit:</label>
             <textarea class="fr-desc" placeholder="Saisissez la description..."></textarea>
         </div>
@@ -119,35 +119,35 @@ form.addEventListener('submit', function(e){
 
     // 获取所有文本内容
     const enText = `Hello Seller, I have an after-sales issue with this product.
-Important: Please attach photos showing the product appearance and send them to the seller!
+Important: Please send the screenshot of the Amazon order number to the seller!
 Product issue description:
 ${document.querySelector('.en-desc').value}
 
 `;
 
     const deText = `Hallo Verkäufer, ich habe ein Kundenservice-Problem mit diesem Produkt.
-Wichtig: Bitte fügen Sie Fotos des Produkts als Anhang hinzu und senden Sie diese an den Verkäufer!
+Wichtig: Bitte senden Sie dem Verkäufer den Screenshot der Amazon‑Bestellnummer!
 Beschreibung des Produktproblems:
 ${document.querySelector('.de-desc').value}
 
 `;
 
     const itText = `Salve Venditore, ho un problema di assistenza post-vendita con questo prodotto.
-Importante: Allegare le foto dell'aspetto del prodotto e inviarle al venditore!
+Importante: Si prega di inviare lo screenshot del numero d'ordine Amazon al venditore!
 Descrizione del problema del prodotto:
 ${document.querySelector('.it-desc').value}
 
 `;
 
     const esText = `Hola Vendedor, tengo un problema de asistencia posventa con este producto.
-Importante: Adjunte fotos del aspecto del producto y envíelas al vendedor!
+Importante: Por favor, envíe la captura de pantalla del número de pedido de Amazon al vendedor!
 Descripción del problema del producto:
 ${document.querySelector('.es-desc').value}
 
 `;
 
     const frText = `Bonjour Vendeur, j’ai un problème de service après-vente concernant ce produit.
-Important: Veuillez joindre les photos de l'apparence du produit et les envoyer au vendeur !
+Important: Veuillez envoyer la capture d'écran du numéro de commande Amazon au vendeur !
 Description du problème du produit:
 ${document.querySelector('.fr-desc').value}
 `;
